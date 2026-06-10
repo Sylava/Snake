@@ -302,7 +302,7 @@ void run_game(SDL_Renderer* renderer, int player_nb)
 
 int main(int argc, char* argv[])
 {
-    int player_nb = atoi(argv[1]);
+    int player_nb = argc > 1 ? atoi(argv[1]) : 1;
     int resolution_x = MAP_SIZE_X * SQUARE_SIZE;
     int resolution_y = MAP_SIZE_Y * SQUARE_SIZE;
     SDL_Init(SDL_INIT_VIDEO);
